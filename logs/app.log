@@ -1,0 +1,71 @@
+2024-11-20 17:32:58 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:34:05 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:34:15 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:35:06 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:38:33 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:39:32 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:40:17 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:40:27 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:40:27 [main] INFO  org.example.Main - Property username is find
+2024-11-20 17:40:27 [main] INFO  org.example.Main - set username: Макар
+2024-11-20 17:40:27 [main] INFO  org.example.Main - Property format is find
+2024-11-20 17:40:27 [main] INFO  org.example.Main - set file format: json
+2024-11-20 17:40:27 [main] INFO  org.example.Main - new Message object: Message{text='Hello Макар !'}
+2024-11-20 17:40:28 [main] INFO  org.example.Main - Json file is saved
+2024-11-20 17:40:28 [main] INFO  org.example.Main - switch json parameter
+2024-11-20 17:41:36 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:41:36 [main] INFO  org.example.Main - Property username is find
+2024-11-20 17:41:36 [main] INFO  org.example.Main - set username: Макар
+2024-11-20 17:41:36 [main] INFO  org.example.Main - Property format is find
+2024-11-20 17:41:36 [main] INFO  org.example.Main - set file format: json
+2024-11-20 17:41:36 [main] INFO  org.example.Main - new Message object: Message{text='Hello Макар !'}
+2024-11-20 17:41:36 [main] INFO  org.example.Main - Json file is saved
+2024-11-20 17:41:36 [main] INFO  org.example.Main - switch json parameter
+2024-11-20 17:41:44 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:41:44 [main] INFO  org.example.Main - Property username is find
+2024-11-20 17:41:44 [main] INFO  org.example.Main - set username: Макар
+2024-11-20 17:41:44 [main] INFO  org.example.Main - Property format is find
+2024-11-20 17:41:44 [main] INFO  org.example.Main - set file format: json
+2024-11-20 17:41:44 [main] INFO  org.example.Main - new Message object: Message{text='Hello Макар !'}
+2024-11-20 17:41:44 [main] INFO  org.example.Main - Json file is saved
+2024-11-20 17:41:44 [main] INFO  org.example.Main - switch json parameter
+2024-11-20 17:41:58 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 17:41:59 [main] INFO  org.example.Main - Property username is find
+2024-11-20 17:41:59 [main] INFO  org.example.Main - set username: Макар
+2024-11-20 17:41:59 [main] INFO  org.example.Main - Property format is find
+2024-11-20 17:41:59 [main] INFO  org.example.Main - set file format: json
+2024-11-20 17:41:59 [main] INFO  org.example.Main - new Message object: Message{text='Hello Макар !'}
+2024-11-20 17:41:59 [main] INFO  org.example.Main - Json file is saved
+2024-11-20 17:41:59 [main] INFO  org.example.Main - switch json parameter
+2024-11-20 18:01:42 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:02:37 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:02:42 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:04:18 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:04:49 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:04:58 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:08:09 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:30:08 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:37:54 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:39:09 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 18:39:19 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 22:06:48 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 22:07:01 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 22:07:44 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 22:07:55 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 22:07:55 [main] INFO  org.example.Main - Property username is find
+2024-11-20 22:07:55 [main] INFO  org.example.Main - set username: Макар
+2024-11-20 22:07:55 [main] INFO  org.example.Main - Property format is find
+2024-11-20 22:07:55 [main] INFO  org.example.Main - set file format: json
+2024-11-20 22:07:55 [main] INFO  org.example.Main - new Message object: Message{text='Hello Макар !'}
+2024-11-20 22:07:56 [main] INFO  org.example.Main - Json file is saved
+2024-11-20 22:07:56 [main] INFO  org.example.Main - switch json parameter
+2024-11-20 22:08:27 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 22:08:43 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 22:08:54 [main] INFO  org.example.Main - Start program------------------------------>
+2024-11-20 22:08:54 [main] INFO  org.example.Main - Property username is find
+2024-11-20 22:08:54 [main] INFO  org.example.Main - set username: Макар
+2024-11-20 22:08:54 [main] INFO  org.example.Main - Property format is find
+2024-11-20 22:08:54 [main] INFO  org.example.Main - set file format: json
+2024-11-20 22:08:54 [main] INFO  org.example.Main - new Message object: Message{text='Hello Макар !'}
+2024-11-20 22:08:55 [main] INFO  org.example.Main - Json file is saved
+2024-11-20 22:08:55 [main] INFO  org.example.Main - switch json parameter

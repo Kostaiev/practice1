@@ -1,0 +1,25 @@
+<configuration>
+
+    <!-- Setting the pattern for formatting log messages -->
+<!--    <appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>logs/app.log</file> &lt;!&ndash; Шлях до файлу для збереження логів &ndash;&gt;-->
+<!--        <append>true</append> &lt;!&ndash; Додавати до існуючого файлу або перезаписувати &ndash;&gt;-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+    <!-- Console appender (for displaying logs in the terminal) -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logging level and appender assignment -->
+    <root level="INFO"> <!-- INFO can be changed to DEBUG or another level -->
+<!--        <appender-ref ref="FILE" />-->
+          <appender-ref ref="STDOUT" />
+      </root>
+
+  </configuration>
