@@ -99,7 +99,7 @@
         <resources>
           <resource>
             <filtering>true</filtering>
-            <directory>/home/pc/Documents/JavaPrograms/shpp/java/1/1.6/json/src/main/resources</directory>
+            <directory>/home/pc/Documents/JavaPrograms/shpp/practice1/src/main/resources</directory>
             <excludes>
               <exclude>**/message.properties</exclude>
             </excludes>
@@ -172,12 +172,12 @@
                   <goal>copy-dependencies</goal>
                 </goals>
                 <configuration>
-                  <outputDirectory>/home/pc/Documents/JavaPrograms/shpp/java/1/1.6/json/target/lib</outputDirectory>
+                  <outputDirectory>/home/pc/Documents/JavaPrograms/shpp/practice1/target/lib</outputDirectory>
                 </configuration>
               </execution>
             </executions>
             <configuration>
-              <outputDirectory>/home/pc/Documents/JavaPrograms/shpp/java/1/1.6/json/target/lib</outputDirectory>
+              <outputDirectory>/home/pc/Documents/JavaPrograms/shpp/practice1/target/lib</outputDirectory>
             </configuration>
           </plugin>
         </plugins>
