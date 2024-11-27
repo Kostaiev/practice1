@@ -49,8 +49,9 @@ public class Main {
                 break;
             }
             default: {
-                printJson(message);
-                logger.debug("switch default parameter");
+                logger.error("switch default parameter");
+                throw new NullPointerException("empty fomat");
+
             }
         }
         logger.info("<------------------------------End program");
@@ -70,22 +71,24 @@ public class Main {
             configPath = args[0];
             logger.debug("args has a path to properties: " + configPath);
         } else if (System.getenv("CONFIG") != null) {
-            configPath = System.getenv("CONFIG");
+            //todo System.getenv for()
+            configPath = System.getenv("CONFIG-1");
             logger.debug("environment variable has a path to properties");
         }
         Properties configProperties = new Properties();
-
+        // todo path file before start
         File file = new File(configPath);
+        logger.debug("Absolute path ------------> {}",file.getAbsolutePath());
 
         logger.debug("Is properties file exists:" + file.exists());
 
-        try (InputStream input = file.exists() ? new FileInputStream(file) : Thread.currentThread().getContextClassLoader().getResourceAsStream(configPath)) {
+        try (InputStream input = file.exists() ? new FileInputStream(file)
+                : Thread.currentThread().getContextClassLoader().getResourceAsStream(configPath)) {
 
             configProperties.load(new InputStreamReader(input, StandardCharsets.UTF_8));
 
         } catch (IOException e) {
-            logger.error(e.getMessage());
-            e.printStackTrace();
+            logger.error("File {} not found",configPath,e);
         }
         return configProperties.getProperty(name, "default");
     }
@@ -102,8 +105,7 @@ public class Main {
             String json = objectMapper.writeValueAsString(obj);
             System.out.println(json);
         } catch (JsonProcessingException e) {
-            logger.error(e.getMessage());
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
         logger.debug("Json file was printed");
     }
@@ -114,14 +116,14 @@ public class Main {
      * @param obj object to be converted
      */
     private static void printXml(Message obj) {
-        XmlMapper xmlMapper = new XmlMapper();
+        //todo plagin
+        ObjectMapper xmlMapper = new XmlMapper();
 
         try {
             String xml = xmlMapper.writeValueAsString(obj);
             System.out.println(xml);
         } catch (JsonProcessingException e) {
-            logger.error(e.getMessage());
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
         logger.info("Xml file was printed");
     }

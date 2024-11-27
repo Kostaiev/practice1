@@ -13,7 +13,7 @@ mvn clean package -Passembly / -Pshade
 2.Run the jar file with libraries
 java -Dformat="json" -jar target/json-1.0.jar "path to properties file"
 
-java -Dformat="json" -jar target/assembly-app.ja
+java -Dformat="json" -jar target/assembly-app.jar
 
 java -Dformat="json" -jar target/assembly-app-jar-with-dependencies.jar
 

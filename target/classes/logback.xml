@@ -17,7 +17,7 @@
     </appender>
 
     <!-- Logging level and appender assignment -->
-    <root level="INFO"> <!-- INFO can be changed to DEBUG or another level -->
+    <root level="DEBUG"> <!-- INFO can be changed to DEBUG or another level -->
 <!--        <appender-ref ref="FILE" />-->
           <appender-ref ref="STDOUT" />
       </root>

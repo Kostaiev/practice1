@@ -35,16 +35,17 @@
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
+        <java.compilar.target>21</java.compilar.target>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.17.2</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-databind</artifactId>-->
+<!--            <version>2.17.2</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -65,7 +66,46 @@
             <version>1.5.6</version>
         </dependency>
     </dependencies>
+<build>
+    <plugins>
+<!--        <plugin>-->
+<!--            <groupId>org.apache.maven.plugins</groupId>-->
+<!--            <artifactId>maven-jar-plugin</artifactId>-->
+<!--            <version>3.2.0</version>-->
+<!--            <configuration>-->
+<!--                <archive>-->
+<!--                    <manifest>-->
+<!--                        <addClasspath>true</addClasspath>-->
+<!--                        <mainClass>org.example.Main</mainClass>-->
+<!--                        <classpathPrefix>./lib/</classpathPrefix>-->
+<!--                    </manifest>-->
+<!--                </archive>-->
+<!--            </configuration>-->
+<!--        </plugin>-->
 
+        <plugin>
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>3.1.1</version>
+            <configuration>
+                <outputDirectory>
+                    ${project.build.directory}/lib
+                </outputDirectory>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>dependency</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>copy-dependencies</goal>
+                    </goals>
+                </execution>
+            </executions>
+
+        </plugin>
+    </plugins>
+</build>
 
     <profiles>
         <profile>
@@ -85,20 +125,20 @@
 
                 <plugins>
 
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
-                        <version>3.2.0</version>
-                        <configuration>
-                            <archive>
-                                <manifest>
-                                    <addClasspath>true</addClasspath>
-                                    <mainClass>org.example.Main</mainClass>
-                                    <classpathPrefix>./lib/</classpathPrefix>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-jar-plugin</artifactId>-->
+<!--                        <version>3.2.0</version>-->
+<!--                        <configuration>-->
+<!--                            <archive>-->
+<!--                                <manifest>-->
+<!--                                    <addClasspath>true</addClasspath>-->
+<!--                                    <mainClass>org.example.Main</mainClass>-->
+<!--                                    <classpathPrefix>./lib/</classpathPrefix>-->
+<!--                                </manifest>-->
+<!--                            </archive>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
 
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -106,12 +146,22 @@
                         <version>3.4.2</version>
                         <configuration>
                             <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
+<!--                                <descriptorRef>jar-with-dependencies</descriptorRef>-->
                             </descriptorRefs>
+                            <descriptors>
+                                <descriptor>
+                                    src/assembly.xml
+                                </descriptor>
+                            </descriptors>
                             <archive>
                                 <manifest>
                                     <mainClass>org.example.Main</mainClass>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>lib</classpathPrefix>
                                 </manifest>
+                                <manifestEntries>
+                                    <Class-Path>.</Class-Path>
+                                </manifestEntries>
                             </archive>
                         </configuration>
                         <executions>
@@ -125,27 +175,27 @@
                         </executions>
                     </plugin>
 
-                    <plugin>
-                        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <version>3.1.1</version>
-                        <configuration>
-                            <outputDirectory>
-                                ${project.build.directory}/lib
-                            </outputDirectory>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>dependency</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>copy-dependencies</goal>
-                                </goals>
-                            </execution>
-                        </executions>
+<!--                    <plugin>-->
+<!--                        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin &ndash;&gt;-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-dependency-plugin</artifactId>-->
+<!--                        <version>3.1.1</version>-->
+<!--                        <configuration>-->
+<!--                            <outputDirectory>-->
+<!--                                ${project.build.directory}/lib-->
+<!--                            </outputDirectory>-->
+<!--                        </configuration>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>dependency</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>copy-dependencies</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
 
-                    </plugin>
+<!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
@@ -195,42 +245,42 @@
                     </plugin>
 
 
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
-                        <version>3.2.0</version>
-                        <configuration>
-                            <archive>
-                                <manifest>
-                                    <addClasspath>true</addClasspath>
-                                    <mainClass>org.example.Main</mainClass>
-                                    <classpathPrefix>./lib/</classpathPrefix>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-jar-plugin</artifactId>-->
+<!--                        <version>3.2.0</version>-->
+<!--                        <configuration>-->
+<!--                            <archive>-->
+<!--                                <manifest>-->
+<!--                                    <addClasspath>true</addClasspath>-->
+<!--                                    <mainClass>org.example.Main</mainClass>-->
+<!--                                    <classpathPrefix>./lib/</classpathPrefix>-->
+<!--                                </manifest>-->
+<!--                            </archive>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
 
-                    <plugin>
-                        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <version>3.1.1</version>
-                        <configuration>
-                            <outputDirectory>
-                                ${project.build.directory}/lib
-                            </outputDirectory>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>dependency</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>copy-dependencies</goal>
-                                </goals>
-                            </execution>
-                        </executions>
+<!--                    <plugin>-->
+<!--                        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin &ndash;&gt;-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-dependency-plugin</artifactId>-->
+<!--                        <version>3.1.1</version>-->
+<!--                        <configuration>-->
+<!--                            <outputDirectory>-->
+<!--                                ${project.build.directory}/lib-->
+<!--                            </outputDirectory>-->
+<!--                        </configuration>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>dependency</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>copy-dependencies</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
 
-                    </plugin>
+<!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
